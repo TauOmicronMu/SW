@@ -47,13 +47,6 @@ public class Test
 		System.out.println("Check: TutorGroup toString()");
 		System.out.println(TG);
 		
-		System.out.println("Check: TutorGroup getStudents()");
-		System.out.println(TG.getStudents());
-		
-		System.out.println("Check: TutorGroup addStudent()");
-		TG.addStudent(bob);
-		System.out.println(TG.getStudents());
-		
 		//System.out.println(alf.getModule(1));
 		
 		for(int i = 0; i < 3; i++)
