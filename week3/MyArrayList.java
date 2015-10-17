@@ -17,7 +17,8 @@ public class MyArrayList
 	
 	// get methods	
 		
-	public String getString(int n)
+	//Was originally named getString...
+	public String get(int n)
 	{
 		if(n >= 0 && n < this.realSize)
 		//If the index is non-negative and in range...
@@ -30,8 +31,9 @@ public class MyArrayList
 	}	
 		
 	// add method
-
-	public void addString(String string)
+	
+	//Was originally named addString...
+	public void add(String string)
 	{
 		if(this.realSize != this.arraySize)
 		//If the array isn't full...

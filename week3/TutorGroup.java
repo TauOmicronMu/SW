@@ -28,8 +28,18 @@ public class TutorGroup
 	{
 		return this.students;
 	}
+
+	public String getTutor()
+	{
+		return this.tutor;
+	}
 		
 // set methods
+
+	public void setTutor(String tutor)
+	{
+		this.tutor = tutor;
+	}
 
 // misc methods
 
