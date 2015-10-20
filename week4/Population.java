@@ -1,14 +1,15 @@
 /**
 Represents a population of people and an infection that passes between between them.
 */
-import java.util.Random;
+import java.util.*;
 
 public class Population
 {
-	private Person[] pop;
+	private ArrayList<Person> pop;
 	private double infect; // infection rate of the disease
 	private double recover; //recovery rate for the disease
 	private Random generator; // random number generator
+	private int popsize; //Number of people in the population
 	
 	/**
 	Create a population, some of whom may be infected
@@ -21,17 +22,21 @@ public class Population
 	{
 		this.infect = infect;
 		this.recover = recover;
-		this.pop = new Person[popsize];
+		this.pop = new ArrayList<Person>();
 		this.generator = new Random();
+		this.popsize = popsize;
 		
-		for(int i = 0; i < pop.length; i++)
+		for(int i = 0; i < popsize; i++)
 		{
-			Person p = new Person();
+			pop.add(new Person());
+		}
+		
+		for(int i = 0; i < popsize; i++)
+		{
 			if(generator.nextDouble() < initial)
 			{
-				p.setInfected(true);
+				pop.get(i).setInfected(true);
 			}
-			pop[i] = p;
 		}
 	
 	}
@@ -42,7 +47,7 @@ public class Population
 	*/
 	public int getPopsize()
 	{
-		return pop.length;
+		return pop.size();
 	}
 	
 	
@@ -94,7 +99,7 @@ public class Population
 	*/
 	public boolean isInfected(int index)
 	{
-		return pop[index].isInfected();
+		return pop.get(index).isInfected();
 	}
 	
 	
@@ -135,7 +140,7 @@ public class Population
 			{
 				if(generator.nextDouble() < recover)
 				{
-					pop[i].setInfected(false);
+					this.pop.get(i).setInfected(false);
 				}
 			}
 			else
@@ -146,7 +151,7 @@ public class Population
 				{
 					if(generator.nextDouble() < infect)
 					{
-						pop[i].setInfected(true);
+						this.pop.get(i).setInfected(true);
 					}
 				}
 			}
