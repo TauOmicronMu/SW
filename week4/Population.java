@@ -217,6 +217,7 @@ public class Population
 		we know the indexes are the same over both lists.
 		*/
 		int deadPeopleRemoved = 0;
+		int x = 0;
 		/*
 		We have to remove the person at position (i - deadPeopleRemoved), because the original list
 		will shrink depending on how many people have died.
@@ -224,12 +225,13 @@ public class Population
 		for(int i = 0; i < getPopsize(); i++)
 		{
 			//Remove any dead people.
-			if(deadPeople.get(i) == 1)
+			if(deadPeople.get(x) == 1)
 			{
 		    	System.out.println("Dead person found! i: " + i);
 				System.out.println("Removing element at position: " + (i - deadPeopleRemoved));
 				pop.remove(i - deadPeopleRemoved);
 				i--; //Decrement i because the ArrayList has shrunk.
+				x++; //Used to access the deadPeople ArrayList.
 				System.out.println("Popsize: " + getPopsize() + ", i: " + i);
 			}
 		}
