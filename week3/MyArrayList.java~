@@ -19,7 +19,7 @@ public class MyArrayList
 		
 	public String getString(int n)
 	{
-		if(!(n < 0 && n >= this.realSize))
+		if(n >= 0 && n < this.realSize)
 		//If the index is non-negative and in range...
 		{
 			return strings[n];

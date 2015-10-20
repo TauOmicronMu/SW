@@ -53,6 +53,13 @@ public class Test
 		System.out.println("Check: TutorGroup addStudent()");
 		TG.addStudent(bob);
 		System.out.println(TG.getStudents());
+
+		System.out.println("Check: TutorGroup setTutor()");
+		TG.setTutor("Achim Jung");
+		System.out.println(TG);
+
+		System.out.println("Check: TutorGroup getTutor()");
+	 	System.out.println(TG.getTutor());
 		
 		//System.out.println(alf.getModule(1));
 		
