@@ -224,16 +224,10 @@ public class Population
 		*/
 		for(int i = 0; i < getPopsize(); i++)
 		{
-			//Remove any dead people.
-			if(deadPeople.get(x) == 1)
-			{
-		    	System.out.println("Dead person found! i: " + i);
-				System.out.println("Removing element at position: " + (i - deadPeopleRemoved));
-				pop.remove(i - deadPeopleRemoved);
-				i--; //Decrement i because the ArrayList has shrunk.
-				x++; //Used to access the deadPeople ArrayList.
-				System.out.println("Popsize: " + getPopsize() + ", i: " + i);
-			}
+		/*
+		TODO : REMOVE DEAD PEOPLE!!!!!!!!!!!!!!!!!!
+		REMEMBER THAT ARRAYLIST SIZE WILL CHANGE!
+		*/
 		}
 		System.out.println("Dead People Removed: " + deadPeopleRemoved);
 		/*
