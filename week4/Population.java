@@ -10,6 +10,7 @@ public class Population
 	private double recover; //recovery rate for the disease
 	private Random generator; // random number generator
 	private int popsize; //Number of people in the population
+	private double deathRate; //Death rate of dying from the infection
 	
 	/**
 	Create a population, some of whom may be infected
@@ -18,13 +19,46 @@ public class Population
 	@param infect the infection rate
 	@param recover the recovery rate
 	*/
-	public Population(int popsize, double initial, double infect, double recover)
+	public Population(int popsize, double initial, double infect, double recover) 
 	{
 		this.infect = infect;
 		this.recover = recover;
 		this.pop = new ArrayList<Person>();
 		this.generator = new Random();
 		this.popsize = popsize;
+		this.deathRate = 0.0; //Defaults to 0.0 when not provided.
+		
+		for(int i = 0; i < popsize; i++)
+		{
+			pop.add(new Person());
+		}
+		
+		for(int i = 0; i < popsize; i++)
+		{
+			if(generator.nextDouble() < initial)
+			{
+				pop.get(i).setInfected(true);
+			}
+		}
+	
+	}
+	
+	/**
+	Create a population, some of whom may be infected
+	@param popsize the population size
+	@param initial the proportion of the population initially infected
+	@param infect the infection rate
+	@param recover the recovery rate
+	@param deathRate the death rate
+	*/
+	public Population(int popsize, double initial, double infect, double recover, double deathRate) 
+	{
+		this.infect = infect;
+		this.recover = recover;
+		this.pop = new ArrayList<Person>();
+		this.generator = new Random();
+		this.popsize = popsize;
+		this.deathRate = deathRate;
 		
 		for(int i = 0; i < popsize; i++)
 		{
@@ -75,6 +109,15 @@ public class Population
 	}
 	
 	/**
+	Get death rate
+	@return death rate
+	*/
+	public double getDeath()
+	{
+		return this.deathRate;
+	}
+	
+	/**
 	Change infection rate
 	@param infect new infection rate
 	*/
@@ -90,6 +133,15 @@ public class Population
 	public void setRecover(double recover)
 	{
 		this.recover = recover;
+	}
+	
+	/**
+	Change death rate
+	@param death new death rate
+	*/
+	public void setDeath(double death)
+	{
+		this.deathRate = death;
 	}
 	
 	/**
@@ -134,6 +186,58 @@ public class Population
 	*/
 	public void update()
 	{
+		ArrayList<Integer> deadPeople = new ArrayList<Integer>();
+		/*
+		Check first to see if anyone dies. This way, the dead people can't recover, nor can  
+		they infect anyone because they're already dead.(i.e. the wrong proportion of people 
+		would die if the death rate wasn't applied at this point in the update process. 
+		*/
+		for(int i = 0; i < getPopsize(); i++)
+		{
+			if(isInfected(i))
+			{	
+				System.out.print(i + " is infected.");
+				if(generator.nextDouble() < deathRate)
+				{
+					deadPeople.add(1); //The person died.
+					System.out.print(" <- i died");
+				}
+				else
+				{
+					deadPeople.add(0); //The person did not die.
+					System.out.print(" <- i didnt die");
+				}
+			System.out.println("");
+			}
+		}	
+		System.out.println("Finished checking for death.");
+		/*
+		Now we have a list with what will act as bools in it, corresponding to whether the person
+		in the same position in the other list is dead. If they are, we can now remove them, as
+		we know the indexes are the same over both lists.
+		*/
+		int deadPeopleRemoved = 0;
+		/*
+		We have to remove the person at position (i - deadPeopleRemoved), because the original list
+		will shrink depending on how many people have died.
+		*/
+		for(int i = 0; i < getPopsize(); i++)
+		{
+			//Remove any dead people.
+			if(deadPeople.get(i) == 1)
+			{
+		    	System.out.println("Dead person found! i: " + i);
+				System.out.println("Removing element at position: " + (i - deadPeopleRemoved));
+				pop.remove(i - deadPeopleRemoved);
+				i--; //Decrement i because the ArrayList has shrunk.
+				System.out.println("Popsize: " + getPopsize() + ", i: " + i);
+			}
+		}
+		System.out.println("Dead People Removed: " + deadPeopleRemoved);
+		/*
+		At this point the dead people have been culled so we can sort out the recovery and infection
+		rates as per usual.
+		*/
 		for(int i = 0; i < getPopsize(); i++)
 		{
 			if(isInfected(i))
@@ -157,17 +261,6 @@ public class Population
 			}
 		}
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }
 	
 	
