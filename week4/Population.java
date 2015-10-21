@@ -186,7 +186,9 @@ public class Population
 	*/
 	public void update()
 	{
-		ArrayList<Integer> deadPeople = new ArrayList<Integer>();
+		ArrayList<Person> alivePeople = new ArrayList<Person>();
+		int deadPeopleRemoved = 0;
+		int infectedPeople = 0;
 		/*
 		Check first to see if anyone dies. This way, the dead people can't recover, nor can  
 		they infect anyone because they're already dead.(i.e. the wrong proportion of people 
@@ -197,43 +199,41 @@ public class Population
 			if(isInfected(i))
 			{	
 				System.out.print(i + " is infected.");
+				infectedPeople++;
 				if(generator.nextDouble() < deathRate)
 				{
-					deadPeople.add(1); //The person died.
 					System.out.print(" <- i died");
+					deadPeopleRemoved++;
 				}
 				else
 				{
-					deadPeople.add(0); //The person did not die.
+					alivePeople.add(pop.get(i)); //The person did not die.
 					System.out.print(" <- i didnt die");
 				}
 			System.out.println("");
 			}
+			else
+			{
+				alivePeople.add(pop.get(i)); //Add all healthy people.
+			}
 		}	
 		System.out.println("Finished checking for death.");
 		/*
-		Now we have a list with what will act as bools in it, corresponding to whether the person
-		in the same position in the other list is dead. If they are, we can now remove them, as
-		we know the indexes are the same over both lists.
+		Now we have a list with only the alive people in, so we replace the old list with the 
+		new one.
 		*/
-		int deadPeopleRemoved = 0;
-		int x = 0;
-		/*
-		We have to remove the person at position (i - deadPeopleRemoved), because the original list
-		will shrink depending on how many people have died.
-		*/
-		for(int i = 0; i < getPopsize(); i++)
-		{
-		/*
-		TODO : REMOVE DEAD PEOPLE!!!!!!!!!!!!!!!!!!
-		REMEMBER THAT ARRAYLIST SIZE WILL CHANGE!
-		*/
-		}
-		System.out.println("Dead People Removed: " + deadPeopleRemoved);
+		this.pop = alivePeople;
+		System.out.println("");
+		System.out.println("Stats");
+		System.out.println("----------");
+		System.out.println("Total Infected Found: " + infectedPeople);
+		System.out.println("Death Count: " + deadPeopleRemoved);
+		System.out.println("Death Rate Given: " + this.deathRate);
 		/*
 		At this point the dead people have been culled so we can sort out the recovery and infection
 		rates as per usual.
 		*/
+		System.out.println("Total pop remaining: " + this.pop.size());
 		for(int i = 0; i < getPopsize(); i++)
 		{
 			if(isInfected(i))
@@ -256,6 +256,8 @@ public class Population
 				}
 			}
 		}
+		System.out.println("Proportion Infected: " + proportionInfected());
+		System.out.println("");
 	}
 }
 	
