@@ -66,6 +66,8 @@ public class SignalMap
 	}
 	
 	/**
+		Calculates the fraction of the map with a poor signal.
+		@return proportion of the map with poor signal.
 	*/
 	public double poorSignal()
 	{

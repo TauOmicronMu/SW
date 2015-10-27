@@ -20,7 +20,8 @@ public class Test
 		SignalStrength grid = new SignalStrength(net, 20);
 		System.out.println(grid.averageSignal());
 
-		SignalMap signalmap = new SignalMap(0.75, 20, net);
+		SignalMap signalmap = new SignalMap(1, 20, net);
 		signalmap.display();
+		System.out.println(signalmap.poorSignal());
 	}
 }
