@@ -58,7 +58,7 @@ public class SignalMap
 				} 
 				else
 				{
-					System.out.print(" ");
+					System.out.print("-");
 				}
 			}
 			System.out.println("");
@@ -166,7 +166,7 @@ public class SignalMap
 				}
 				else
 				{
-					System.out.print("");
+					System.out.print("-");
 				}
 			}
 			System.out.println("");
