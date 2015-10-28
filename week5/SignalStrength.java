@@ -19,7 +19,7 @@ public class SignalStrength
 	{
 		this.net = net;
 		this.range = range;
-		signal = new double[range][range];
+		this.signal = new double[range][range];
 		
 		
 		for(int i = 0; i < range; i++)
@@ -49,8 +49,16 @@ public class SignalStrength
 		return count/(range * range);
 	}
 	
-	
-		
+	/**
+		Return the signal strength at position, (x, y).
+		@param x the x coordinate
+		@param y the y coordinate
+		@return the signal strength at (x, y).
+	*/
+	public double getStrength(int x, int y)
+	{
+		return this.signal[x][y];
+	}	
 }
 		
 		

@@ -16,6 +16,11 @@ public class Network
 		this.stations = new ArrayList<Transmitter>();
 	}
 	
+	public String toString()
+	{
+		return "Network, size: " + size() +  ", consisting of: " + this.stations;
+	}
+	
 	/**
 	Add a transmitter to the network
 	@param t transmitter to be added
