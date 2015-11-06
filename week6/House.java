@@ -22,16 +22,13 @@ public class House
 	    rightRoof = new Line2D.Double(xCoord + size, (yCoord + size/2),
 					    (xCoord + size/2), yCoord);
 	    door = new Rectangle(xCoord + size/2, yCoord + size,
-			 		    size/4, size/4);
+			 		    size/4, size/2);
 	}
 	/**
 		Draw the house on a graphics object.
 	*/
 	public void draw(Graphics2D g)
 	{
-		g.setColor(Color.WHITE);
-		g.fill(building);
-		g.fill(door);
                 g.setColor(Color.BLACK);
 	        g.draw(building);
 		g.draw(leftRoof);
