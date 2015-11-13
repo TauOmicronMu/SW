@@ -4,7 +4,7 @@ public class VirusViewer
 {		
 	public static void main(String[] args)
 	{
-		Population pop = new Population(100, 0.1, 0.85, 0.2);
+		Population pop = new Population(100, 0.7, 0.40, 0.25);
 		double[] proportion = new double[1000];
 		for(int i = 0; i < proportion.length; i++)
 		{
@@ -13,14 +13,14 @@ public class VirusViewer
 		}
 		
 		int frameSize = 1000;
-		int offset = 200;
+		/*int offset = 200;*/
 		
 		JFrame frame = new JFrame();
 		
-		frame.setSize(frameSize + offset*2, frameSize + offset*2);
+		frame.setSize(frameSize, frameSize);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
-		VirusComponent virus = new VirusComponent(proportion, frameSize, offset);
+		VirusComponent virus = new VirusComponent(proportion, frameSize);
 		
 		frame.add(virus);
 		
