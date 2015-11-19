@@ -1,0 +1,77 @@
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JLabel;
+
+/**
+ * 
+ * @author txg523
+ *
+ */
+public class EasterView extends JLabel implements Observer {
+	
+	private EasterModel model;
+	private String month;
+	
+	public EasterView(EasterModel model) {
+		
+		super();
+		this.model = model;
+				
+		monthToString();
+		setText("In the year " + this.model.getYear() + ", Easter was on " + this.model.getDay() + " " + this.month);
+	}
+	
+	public void update(Observable obs, Object obj){
+		
+		monthToString();
+		setText("In the year " + this.model.getYear() + ", Easter was on " + this.model.getDay() + " " + this.month);
+	}
+	
+	public void monthToString(){
+		/*
+		 * I used a case statement because I wanted to try them out. 
+		 * I was going to create an array of months and just access the (i-1)th element, 
+		 * but where's the fun in that? :D
+		 */
+		
+		switch (this.model.getMonth()){
+			case 1: this.month = "January";
+			break;
+			
+			case 2: this.month = "February";
+			break;
+			
+			case 3: this.month = "March";
+			break;
+			
+			case 4: this.month = "April";
+			break;
+			
+			case 5: this.month = "May";
+			break;
+			
+			case 6: this.month = "June";
+			break;
+			
+			case 7: this.month = "July";
+			break;
+			
+			case 8: this.month = "August";
+			break;
+			
+			case 9: this.month = "September";
+			break;
+			
+			case 10: this.month = "October";
+			break;
+			
+			case 11: this.month = "November";
+			break;
+			
+			case 12: this.month = "December";
+			break;
+		}
+	}
+	
+}
