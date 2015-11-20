@@ -1,0 +1,4 @@
+
+public class EasterComponent extends JPanel {
+	
+}
