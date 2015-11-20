@@ -2,8 +2,19 @@ import javax.swing.JPanel;
 import javax.swing.JSlider;
 import javax.swing.event.ChangeListener;
 
-
+/**
+ * 
+ * @author txg523
+ *
+ */
 public class EasterComponent extends JPanel {
+	/**
+	 * Create a new EasterComponent
+	 * @param easter the Easter object
+	 * @param min the minimum value for the slider
+	 * @param max the maximum value for the slider
+	 * @param initial the initial value for the slider
+	 */
 	public EasterComponent(Easter easter, int min, int max, int initial) {
 		super();
 		

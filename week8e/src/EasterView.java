@@ -13,6 +13,10 @@ public class EasterView extends JLabel implements Observer {
 	private EasterModel model;
 	private String month;
 	
+	/**
+	 * Create a new easter view
+	 * @param model The easter model
+	 */
 	public EasterView(EasterModel model) {
 		
 		super();
@@ -22,12 +26,18 @@ public class EasterView extends JLabel implements Observer {
 		setText("In the year " + this.model.getYear() + ", Easter was on " + this.model.getDay() + " " + this.month);
 	}
 	
+	/**
+	 * Update when the observable changes.
+	 */
 	public void update(Observable obs, Object obj){
 		
 		monthToString();
 		setText("In the year " + this.model.getYear() + ", Easter was on " + this.model.getDay() + " " + this.month);
 	}
 	
+	/**
+	 * Convert the month int, to the corresponding string.
+	 */
 	public void monthToString(){
 		/*
 		 * I used a case statement because I wanted to try them out. 

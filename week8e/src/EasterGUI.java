@@ -1,10 +1,14 @@
 import javax.swing.JFrame;
 
-
+/**
+ * 
+ * @author txg523
+ *
+ */
 public class EasterGUI {
 	public static void main(String[] args) {
 		JFrame frame = new JFrame("Easter Calculator");
-	    frame.setSize(250,250);
+	    frame.setSize(400,250);
 	    frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	    
 	    Easter easter = new Easter(0);
