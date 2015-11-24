@@ -11,6 +11,11 @@ public class SpatialNetwork {
 	private int numberOfPoints;
 	private double threshold;
 	
+	/**
+	 * Create a new SpatialNetwork
+	 * @param numberOfPoints the number of nodes that the network is comprised of.
+	 * @param threshold the threshold for connectivity of nodes.
+	 */
 	public SpatialNetwork(int numberOfPoints, double threshold) {
 		this.setNumberOfPoints(numberOfPoints);
 		this.setThreshold(threshold);
@@ -34,10 +39,18 @@ public class SpatialNetwork {
 		return this.points.get(index).getY();
 	}
 
+	/**
+	 * Returns the number of nodes in the network.
+	 * @return the number of nodes in the network.
+	 */
 	public int getNumberOfPoints() {
 		return numberOfPoints;
 	}
 
+	/**
+	 * Changes the number of nodes in a network.
+	 * @param numberOfPoints the new number of nodes.
+	 */
 	public void setNumberOfPoints(int numberOfPoints) {
 		this.numberOfPoints = numberOfPoints;
 	}
@@ -52,10 +65,18 @@ public class SpatialNetwork {
 		return (Math.sqrt( (a.getX() - b.getX()) * (a.getX() - b.getX()) + (a.getY() - b.getY()) * (a.getY() - b.getY()) ) < this.threshold);
 	}
 	
+	/**
+	 * Returns the current threshold value
+	 * @return threshold - the current threshold value.
+	 */
 	public double getThreshold() {
 		return threshold;
 	}
 
+	/**
+	 * Changes the threshold value.
+	 * @param threshold the new threshold.
+	 */
 	public void setThreshold(double threshold) {
 		this.threshold = threshold;
 	}
