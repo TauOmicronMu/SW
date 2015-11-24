@@ -1,10 +1,5 @@
 import javax.swing.JFrame;
 
-/**
- * A gui to display a Spacial network
- * @author txg523
- *
- */
 public class SpatialGUI {
 
 	public static void main(String[] args) {
