@@ -47,6 +47,7 @@ public class EasterModel extends Observable {
 	 */
 	public void setYear(int year){
 		this.easter.setYear(year);
+		setChanged();
 		notifyObservers();
 	}
 
