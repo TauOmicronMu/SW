@@ -1,0 +1,34 @@
+import java.util.Observable;
+
+/**
+ * Model of SpatialNetwork.
+ * @author txg523
+ *
+ */
+public class SpatialModel extends Observable {
+	
+	private SpatialNetwork network;
+	
+	public SpatialModel(SpatialNetwork network) {
+		super();
+		this.network = network;
+		
+	}
+	
+	/**
+	 * Wrapper for the method of the same name in SpatialNetwork.
+	 * @param index
+	 * @return 
+	 */
+	public double getX(int index) {
+		return this.network.getX(index);
+	}
+
+	public double getY(int index) {
+		return this.network.getY(index);
+	}
+	
+	public int getNumberOfPoints() {
+		return this.network.getNumberOfPoints();
+	}
+}

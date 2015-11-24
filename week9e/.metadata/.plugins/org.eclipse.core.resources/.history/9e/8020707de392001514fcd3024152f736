@@ -1,0 +1,44 @@
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JPanel;
+
+/**
+ * Draws spots for the points on the graph, then draws lines between 
+ * any connected lines.
+ * @author txg523
+ *
+ */
+public class SpatialView extends JPanel implements Observer {
+	private SpatialModel model;
+	
+	public SpatialView(SpatialModel model) {
+		this.model = model;
+	}
+	
+	public void paintComponent(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		
+		g2.setColor(Color.BLACK);
+		
+		for(int i = 0; i < this.model.getNumberOfPoints(); i++) {
+			//Draw the individual spot.
+			g2.draw(this.model.getSpot(i));
+			
+			//Check to see what lines are required, and draw them.
+			for(int j = 0; i < this.model.getNumberOfPoints(); j++) {
+				if(this.model.isConnected(this.model.getSpot(i), this.model.getSpot(j))) {
+					//The two nodes are connected so draw a line between them...
+					g2.drawLine.Double(this.model.getX(i), this.model.getY(i), this.model.getX(j), this.model.getY(j));	
+				}
+			}
+		}
+	}
+	
+	public void update(Observable obs, Object obj) {
+		repaint();
+	}
+}

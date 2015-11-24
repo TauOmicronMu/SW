@@ -1,0 +1,33 @@
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JPanel;
+
+/**
+ * Draws spots for the points on the graph, then draws lines between 
+ * any connected lines.
+ * @author txg523
+ *
+ */
+public class SpatialView extends JPanel implements Observer {
+	private SpatialModel model;
+	private SpatialModel SpatialModel;
+	
+	public SpatialView(SpatialModel model) {
+		this.SpatialModel = model;
+	}
+	
+	public void paintComponent(Graphics g) {
+		Graphics2D g2 = (Graphics2D)g;
+		
+		for(int i = 0; i < this.model.getNumberOfPoints(); i++) {
+			g2.draw();
+		}
+	}
+	
+	public void update(Observable obs, Object obj) {
+		//TODO
+	}
+}
