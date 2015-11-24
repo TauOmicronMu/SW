@@ -16,7 +16,6 @@ public class SpatialModel extends Observable {
 	public SpatialModel(SpatialNetwork network) {
 		super();
 		this.network = network;
-		
 	}
 	
 	/**
@@ -46,10 +45,31 @@ public class SpatialModel extends Observable {
 	}
 	
 	/**
-	 * Wrapper for the method of the same name in SpatialNetwork
+	 * Wrapper for the method of the same name in SpatialNetwork.
 	 * @return the current threshold for node connectivity.
 	 */
 	public double getThreshold() {
 		return this.network.getThreshold();
+	}
+	
+	/**
+	 * Wrapper for the method of the same name in SpatialNetwork.
+	 * @param threshold thew new threshold for node connectivity.
+	 */
+	public void setThreshold(double threshold) {
+		this.network.setThreshold(threshold);
+	}
+	
+	/**
+	 * Wrapper for the method of the same name in SpatialNetwork.
+	 * @param index
+	 * @return
+	 */
+	public Spot getSpot(int index) {
+		return this.network.getSpot(index);
+	}
+	
+	public boolean isConnected(Spot a, Spot b) {
+		return this.network.isConnected(a, b);
 	}
 }

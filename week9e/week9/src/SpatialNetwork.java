@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 /**
  * Represents the points of a random spatial network with a given number
@@ -19,6 +20,14 @@ public class SpatialNetwork {
 	public SpatialNetwork(int numberOfPoints, double threshold) {
 		this.setNumberOfPoints(numberOfPoints);
 		this.setThreshold(threshold);
+		this.points = new ArrayList<Spot>();
+		
+		int scale = 500;
+		
+		for(int i = 0; i < this.numberOfPoints; i++) {
+			Spot spot = new Spot( ((new Random()).nextDouble() * scale), ((new Random()).nextDouble() * scale), 3.0);
+			this.points.add(spot);		
+		}
 	}
 	
 	/**
@@ -79,6 +88,15 @@ public class SpatialNetwork {
 	 */
 	public void setThreshold(double threshold) {
 		this.threshold = threshold;
+	}
+	
+	/**
+	 * Returns the spot shape at the given index, index.
+	 * @param index The index of the spot shape.
+	 * @return The spot shape.
+	 */
+	public Spot getSpot(int index) {
+		return this.points.get(index);
 	}
 }
 
