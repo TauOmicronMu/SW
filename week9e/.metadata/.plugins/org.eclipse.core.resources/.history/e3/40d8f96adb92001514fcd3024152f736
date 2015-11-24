@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+
+/**
+ * Represents the points of a random spatial network with a given number
+ * of nodes and a given threshold.
+ * @author txg523
+ *
+ */
+public class SpatialNetwork {
+	private ArrayList<Spot> points;
+	private int numberOfPoints;
+	private double threshold;
+	
+	public SpatialNetwork(int numberOfPoints, double threshold) {
+		this.setNumberOfPoints(numberOfPoints);
+		this.setThreshold(threshold);
+	}
+	
+	public double getX(int index) {
+		return this.points.get(index);
+	}
+	
+	public double getY(int index) {
+		return this.points.get(index);
+	}
+
+	public int getNumberOfPoints() {
+		return numberOfPoints;
+	}
+
+	public void setNumberOfPoints(int numberOfPoints) {
+		this.numberOfPoints = numberOfPoints;
+	}
+	
+	/**
+	 * Return whether two points are connected or not, using Pythagoras' for the distance.
+	 * @param a The first point.
+	 * @param b The second point.
+	 * @return True (connected) or false (not connected).
+	 */
+	public boolean isConnected(Spot a, Spot b) {
+		return (Math.sqrt( (a.getX() - b.getX()) * (a.getX() - b.getX()) + (a.getY() - b.getY()) * (a.getY() - b.getY()) ) < this.threshold);
+		}
+	}
+	
+	public double getThreshold() {
+		return threshold;
+	}
+
+	public void setThreshold(double threshold) {
+		this.threshold = threshold;
+	}
+}
+
