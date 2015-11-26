@@ -11,21 +11,27 @@ import javax.swing.JSlider;
  * The slider changes the value of the Threshold, and the picture
  * will redraw accordingly.
  * @author txg523
- *
  */
 @SuppressWarnings("serial")
-public class ThresholdPanel extends JPanel implements Observer {
+public class NumberPanel extends JPanel implements Observer {
 	private JLabel label;
 	private JSlider slider;
 	private SpatialModel model;
 	
-	public ThresholdPanel(SpatialModel model, int min, int max, int init) {
+	/**
+	 * Create a new NumberPanel.
+	 * @param model The SpatialModel
+	 * @param min The minimum value for the slider
+	 * @param max The maximum value for the slider
+	 * @param init The initial value for the slider
+	 */
+	public NumberPanel(SpatialModel model, int min, int max, int init) {
 		super(new BorderLayout());
 		this.model = model;
 		label = new JLabel();
-		label.setText("Threshold");
+		label.setText("Number of nodes");
 		slider = new JSlider(min, max, init);
-		slider.addChangeListener(event -> model.setThreshold(slider.getValue()));
+		slider.addChangeListener(event -> model.setNumberOfPoints(slider.getValue()));
 		
 		slider.setPaintTicks(true);
 		slider.setMajorTickSpacing((max-min)/10);
@@ -37,11 +43,11 @@ public class ThresholdPanel extends JPanel implements Observer {
 	}
 	
 	/**
-	 * Update stuff
-	 * @param obs
-	 * @param obj
+	 * Update the slider value.
+	 * @param obs The observable
+	 * @param obj The object
 	 */
 	public void update(Observable obs, Object obj) {
-		slider.setValue((int)model.getThreshold());
+		slider.setValue(model.getNumberOfPoints());
 	}
 }

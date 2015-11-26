@@ -11,20 +11,26 @@ public class SpatialNetwork {
 	private ArrayList<Spot> points;
 	private int numberOfPoints;
 	private double threshold;
+	private int initPoints;
+	private double initThreshold;
 	
 	/**
 	 * Create a new SpatialNetwork
 	 * @param numberOfPoints the number of nodes that the network is comprised of.
+	 * @param maxPoints the maximum number of nodes.
 	 * @param threshold the threshold for connectivity of nodes.
 	 */
-	public SpatialNetwork(int numberOfPoints, double threshold) {
+	public SpatialNetwork(int numberOfPoints, int maxPoints, double threshold) {
 		this.setNumberOfPoints(numberOfPoints);
 		this.setThreshold(threshold);
 		this.points = new ArrayList<Spot>();
 		
+		this.initPoints = numberOfPoints;
+		this.initThreshold = threshold;
+		
 		int scale = 500;
 		
-		for(int i = 0; i < this.numberOfPoints; i++) {
+		for(int i = 0; i < maxPoints; i++) {
 			Spot spot = new Spot( ((new Random()).nextDouble() * scale), ((new Random()).nextDouble() * scale), 3.0);
 			this.points.add(spot);		
 		}
@@ -88,6 +94,7 @@ public class SpatialNetwork {
 	 */
 	public void setThreshold(double threshold) {
 		this.threshold = threshold;
+		
 	}
 	
 	/**
@@ -97,6 +104,14 @@ public class SpatialNetwork {
 	 */
 	public Spot getSpot(int index) {
 		return this.points.get(index);
+	}
+	
+	/**
+	 * Resets the Network to the initial values.
+	 */
+	public void reset() {
+		setNumberOfPoints(this.initPoints);
+		setThreshold(this.initThreshold);
 	}
 }
 

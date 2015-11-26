@@ -1,0 +1,25 @@
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+/**
+ * Contains a button to reset the network, and a button to close the program.
+ * @author txg523
+ */
+@SuppressWarnings("serial")
+public class ButtonPanel extends JPanel{
+	/**
+	 * Create a new ButtonPanel
+	 * @param model The SpatialModel
+	 */	
+	public ButtonPanel(SpatialModel model) {
+		super();
+		JButton reset = new JButton("Reset");
+		JButton back = new JButton("Exit");
+
+		reset.addActionListener(event -> model.reset());
+		back.addActionListener(event -> System.exit(0));
+		
+		add(reset);
+		add(back);
+	}
+}

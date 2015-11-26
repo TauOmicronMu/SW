@@ -1,7 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
-import java.awt.RenderingHints;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -13,6 +12,7 @@ import javax.swing.JPanel;
  * @author txg523
  *
  */
+@SuppressWarnings("serial")
 public class SpatialView extends JPanel implements Observer {
 	private SpatialModel model;
 	
@@ -20,15 +20,15 @@ public class SpatialView extends JPanel implements Observer {
 		this.model = model;
 	}
 	
+	/**
+	 * Draw nice things ^-^
+	 */
 	public void paintComponent(Graphics g) {
 		Graphics2D g2 = (Graphics2D)g;
-		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		// g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		g2.clearRect(0, 0, getWidth(), getHeight());
 		
-		for(int i = 0; i < this.model.getNumberOfPoints(); i++) {
-			//Draw the individual spot.
-			g2.setColor(Color.BLACK);
-			g2.fill(this.model.getSpot(i));
-			
+		for(int i = 0; i < this.model.getNumberOfPoints(); i++) {			
 			//Check to see what lines are required, and draw them.
 			g2.setColor(Color.GRAY);
 			for(int j = 0; j < this.model.getNumberOfPoints(); j++) {
@@ -37,6 +37,12 @@ public class SpatialView extends JPanel implements Observer {
 					g2.drawLine((int)this.model.getX(i), (int)this.model.getY(i), (int)this.model.getX(j), (int)this.model.getY(j));	
 				}
 			}
+		}
+		
+		for(int i = 0; i < this.model.getNumberOfPoints(); i++) {
+			//Draw the individual spot.
+			g2.setColor(Color.BLACK);
+			g2.fill(this.model.getSpot(i));
 		}
 	}
 	

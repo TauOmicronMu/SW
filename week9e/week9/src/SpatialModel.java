@@ -46,6 +46,16 @@ public class SpatialModel extends Observable {
 	
 	/**
 	 * Wrapper for the method of the same name in SpatialNetwork.
+	 * @param number the new threshold for node connectivity.
+	 */
+	public void setNumberOfPoints(int number) {
+		this.network.setNumberOfPoints(number);
+		setChanged();
+		notifyObservers();
+	}
+
+	/**
+	 * Wrapper for the method of the same name in SpatialNetwork.
 	 * @return the current threshold for node connectivity.
 	 */
 	public double getThreshold() {
@@ -58,6 +68,8 @@ public class SpatialModel extends Observable {
 	 */
 	public void setThreshold(double threshold) {
 		this.network.setThreshold(threshold);
+		setChanged();
+		notifyObservers();
 	}
 	
 	/**
@@ -69,7 +81,22 @@ public class SpatialModel extends Observable {
 		return this.network.getSpot(index);
 	}
 	
+	/**
+	 * Wrapper for the method of the same name in SpatialNetwork.
+	 * @param a The first spot
+	 * @param b The second spot
+	 * @return
+	 */
 	public boolean isConnected(Spot a, Spot b) {
 		return this.network.isConnected(a, b);
+	}
+	
+	/**
+	 * Wrapper for the method of the same name in SpatialNetwork.
+	 */
+	public void reset() {
+		network.reset();
+		setChanged();
+		notifyObservers();
 	}
 }
