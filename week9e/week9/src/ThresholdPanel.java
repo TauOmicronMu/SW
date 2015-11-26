@@ -26,6 +26,6 @@ public class ThresholdPanel extends JPanel implements Observer {
 	
 	public void update(Observable o, Object arg) {
 		// TODO Auto-generated method stub
-		model.setThreshold(model.getThreshold())
+		model.setThreshold(model.getThreshold());
 	}
 }

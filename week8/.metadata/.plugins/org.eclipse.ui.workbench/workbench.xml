@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="13" version="2.0">
+<workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="1722" width="2330" x="0" y="0">
+<window height="1696" width="2328" x="0" y="0">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -33,41 +33,21 @@
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
-<part id="3"/>
-<part id="4"/>
-<part id="5"/>
-<part id="6"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Easter.java" partName="Easter.java" path="/home/txg523/Desktop/SW/week8e/src/Easter.java" title="Easter.java" tooltip="week8e/src/Easter.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/week8e/src/Easter.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1526" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" partName="Test.java" path="/home/txg523/Desktop/SW/week8e/src/Test.java" title="Test.java" tooltip="week8e/src/Test.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/week8e/src/Test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="127" selectionTopPixel="0"/>
-</editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterModel.java" partName="EasterModel.java" path="/home/txg523/Desktop/SW/week8e/src/EasterModel.java" title="EasterModel.java" tooltip="week8e/src/EasterModel.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/week8e/src/EasterModel.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="127" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="28" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterView.java" partName="EasterView.java" path="/home/txg523/Desktop/SW/week8e/src/EasterView.java" title="EasterView.java" tooltip="week8e/src/EasterView.java" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterView.java" partName="EasterView.java" path="/home/txg523/Desktop/SW/week8e/src/EasterView.java" title="EasterView.java" tooltip="week8e/src/EasterView.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/week8e/src/EasterView.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1217" selectionTopPixel="44"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="28" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SliderListener.java" partName="SliderListener.java" path="/home/txg523/Desktop/SW/week8e/src/SliderListener.java" title="SliderListener.java" tooltip="week8e/src/SliderListener.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/week8e/src/SliderListener.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="340" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterComponent.java" partName="EasterComponent.java" path="/home/txg523/Desktop/SW/week8e/src/EasterComponent.java" title="EasterComponent.java" tooltip="week8e/src/EasterComponent.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/week8e/src/EasterComponent.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="674" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterGUI.java" partName="EasterGUI.java" path="/home/txg523/Desktop/SW/week8e/src/EasterGUI.java" title="EasterGUI.java" tooltip="week8e/src/EasterGUI.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/week8e/src/EasterGUI.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="416" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="192" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -77,7 +57,6 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="609" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
@@ -173,43 +152,30 @@
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <fastViewBars/>
-<layout>
-<mainWindow>
-<info folder="true" part="topLeft">
-<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">
-<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.navigator.ProjectExplorer" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.navigator.ProjectExplorer" label="Project Explorer"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
 <page content="org.eclipse.team.ccvs.ui.RepositoriesView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.ui.internal.ViewStack@5bf3f591" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@5bf3f591" ratio="0.7495049" ratioLeft="757" ratioRight="253" relationship="2" relative="topLeft">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.internal.introview" label="LabelNotFound"/>
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25940594" ratioLeft="262" ratioRight="748" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottomRight" ratio="0.6593407" ratioLeft="420" ratioRight="217" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<info folder="true" part="bottomRight" ratio="0.6593407" ratioLeft="420" ratioRight="217" relationship="4" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.TaskList" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.team.ui.GenericHistoryView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
-<info folder="true" part="bottomLeft" ratio="0.49921507" ratioLeft="318" ratioRight="319" relationship="4" relative="topLeft">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="bottomLeft" ratio="0.49921507" ratioLeft="318" ratioRight="319" relationship="4" relative="topLeft">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
 </presentation>
 </folder>
 </info>
@@ -329,162 +295,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/Easter.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/EasterView.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" org.eclipse.jdt.ui.ClassFileIdentifier="=week8e/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Observer.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/SliderListener.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/EasterComponent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/SliderListener.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/EasterView.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/Easter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/EasterModel.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/EasterGUI.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/EasterComponent.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/week8e/src/Test.java"/>
 </editors>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="1485" y="0"/>
+<item historyLabel="SliderListener.java" index="1">
+<position info="not_deleted" x="192" y="0"/>
 </item>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="519" y="0"/>
+<item historyLabel="EasterComponent.java" index="0">
+<position info="not_deleted" x="674" y="0"/>
 </item>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="331" y="0"/>
+<item historyLabel="SliderListener.java" index="1">
+<position info="not_deleted" x="192" y="0"/>
 </item>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="459" y="0"/>
-</item>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="314" y="0"/>
-</item>
-<item historyLabel="Observer.class" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="314" y="0"/>
-</item>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="950" y="0"/>
-</item>
-<item historyLabel="EasterView.java" index="1">
-<position info="not_deleted" x="1047" y="0"/>
-</item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="EasterView.java" index="1">
+<item historyLabel="EasterView.java" index="2">
 <position info="not_deleted" x="1217" y="0"/>
 </item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="67" y="0"/>
+<item historyLabel="Easter.java" index="3">
+<position/>
 </item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="125" y="0"/>
+<item historyLabel="EasterView.java" index="2">
+<position info="not_deleted" x="1217" y="0"/>
 </item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="136" y="7"/>
+<item historyLabel="EasterModel.java" index="4">
+<position/>
 </item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="127" y="0"/>
+<item historyLabel="EasterView.java" index="2">
+<position info="not_deleted" x="1217" y="0"/>
 </item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="136" y="7"/>
+<item historyLabel="SliderListener.java" index="1">
+<position info="not_deleted" x="192" y="0"/>
 </item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="366" y="0"/>
-</item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="338" y="0"/>
-</item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="369" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="97" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="908" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="292" y="0"/>
-</item>
-<item historyLabel="Easter.java" index="0">
-<position info="not_deleted" x="1526" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="292" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="905" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="668" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="905" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="905" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="450" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="889" y="3"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="451" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="474" y="7"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="98" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="135" y="6"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="806" y="17"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="531" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="605" y="0"/>
+<item historyLabel="EasterComponent.java" index="0">
+<position info="not_deleted" x="674" y="0"/>
 </item>
 <item historyLabel="EasterGUI.java" index="5">
+<position/>
+</item>
+<item historyLabel="Easter.java" index="3">
+<position/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="415" y="0"/>
+</item>
+<item historyLabel="Easter.java" index="3">
+<position/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="415" y="0"/>
+</item>
+<item historyLabel="Easter.java" index="3">
+<position/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="415" y="0"/>
+</item>
+<item historyLabel="Easter.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterComponent.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterGUI.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterView.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SliderListener.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Test.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="SliderListener.java" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterView.java" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterGUI.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterComponent.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterGUI.java" index="5">
+<position info="not_deleted" x="85" y="0"/>
+</item>
+<item historyLabel="EasterComponent.java" index="6">
+<position info="not_deleted" x="397" y="0"/>
+</item>
+<item historyLabel="EasterGUI.java" index="5">
+<position info="not_deleted" x="60" y="0"/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="129" y="0"/>
+</item>
+<item historyLabel="EasterView.java" index="2">
+<position info="not_deleted" x="28" y="0"/>
+</item>
+<item historyLabel="SliderListener.java" index="1">
+<position info="not_deleted" x="192" y="0"/>
+</item>
+<item historyLabel="Test.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Easter.java" index="3">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EasterComponent.java" index="6">
+<position info="not_deleted" x="397" y="0"/>
+</item>
+<item historyLabel="EasterGUI.java" index="5">
+<position info="not_deleted" x="60" y="0"/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="122" y="0"/>
+</item>
+<item historyLabel="Easter.java" index="3">
+<position info="not_deleted" x="1661" y="0"/>
+</item>
+<item historyLabel="EasterComponent.java" index="6">
+<position info="not_deleted" x="397" y="0"/>
+</item>
+<item historyLabel="EasterGUI.java" index="5">
+<position info="not_deleted" x="60" y="0"/>
+</item>
+<item historyLabel="EasterModel.java" index="4">
+<position info="not_deleted" x="28" y="0"/>
+</item>
+<item historyLabel="SliderListener.java" index="1">
+<position info="not_deleted" x="192" y="0"/>
+</item>
+<item historyLabel="Test.java" index="7">
+<position info="not_deleted" x="221" y="0"/>
+</item>
+<item historyLabel="Easter.java" index="3">
+<position info="not_deleted" x="1661" y="0"/>
+</item>
+<item historyLabel="EasterView.java" index="2">
 <position info="not_deleted" x="28" y="0"/>
 </item>
 <item historyLabel="EasterGUI.java" index="5">
-<position info="not_deleted" x="86" y="0"/>
+<position info="not_deleted" x="60" y="0"/>
 </item>
-<item historyLabel="EasterGUI.java" index="5">
-<position info="not_deleted" x="413" y="0"/>
-</item>
-<item historyLabel="EasterGUI.java" index="5">
-<position info="not_deleted" x="413" y="0"/>
-</item>
-<item historyLabel="EasterGUI.java" index="5">
-<position info="not_deleted" x="416" y="0"/>
-</item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="369" y="0"/>
-</item>
-<item historyLabel="SliderListener.java" index="3">
-<position info="not_deleted" x="340" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="605" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="806" y="17"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="911" y="0"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="806" y="17"/>
-</item>
-<item historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="871" y="0"/>
-</item>
-<item active="true" historyLabel="EasterComponent.java" index="4">
-<position info="not_deleted" x="806" y="17"/>
+<item active="true" historyLabel="EasterView.java" index="2">
+<position info="not_deleted" x="28" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -492,9 +460,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="right"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -502,22 +467,15 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.intro.impl.presentations.IntroLaunchBar"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterGUI.java" tooltip="week8e/src/EasterGUI.java">
-<persistable path="/week8e/src/EasterGUI.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterComponent.java" tooltip="week8e/src/EasterComponent.java">
-<persistable path="/week8e/src/EasterComponent.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="week8e/src/Test.java">
+<persistable path="/week8e/src/Test.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SliderListener.java" tooltip="week8e/src/SliderListener.java">
 <persistable path="/week8e/src/SliderListener.java"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" name="Observer.class" tooltip="java.util.Observer">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=week8e/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Observer.class"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterView.java" tooltip="week8e/src/EasterView.java">
 <persistable path="/week8e/src/EasterView.java"/>
@@ -525,11 +483,17 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterModel.java" tooltip="week8e/src/EasterModel.java">
 <persistable path="/week8e/src/EasterModel.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="week8e/src/Test.java">
-<persistable path="/week8e/src/Test.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterGUI.java" tooltip="week8e/src/EasterGUI.java">
+<persistable path="/week8e/src/EasterGUI.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EasterComponent.java" tooltip="week8e/src/EasterComponent.java">
+<persistable path="/week8e/src/EasterComponent.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Easter.java" tooltip="week8e/src/Easter.java">
 <persistable path="/week8e/src/Easter.java"/>
+</file>
+<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditorNoSource" name="Observer.class" tooltip="java.util.Observer">
+<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=week8e/\/usr\/lib\/jvm\/java-7-openjdk-amd64\/jre\/lib\/rt.jar&lt;java.util(Observer.class"/>
 </file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Test.java" tooltip="/home/txg523/Desktop/SW/week8/Test.java">
 <persistable uri="file:/home/txg523/Desktop/SW/week8/Test.java"/>
