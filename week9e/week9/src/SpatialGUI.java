@@ -18,8 +18,10 @@ public class SpatialGUI {
 		
 		ThresholdPanel panel = new ThresholdPanel(model, 0, 1000, 250);
 		
+		SpatialComponent comp = new SpatialComponent(panel);
+		
 		frame.add(view);
-		frame.add(panel);
+		frame.add(comp);
 		frame.setVisible(true);
 	}
 }
