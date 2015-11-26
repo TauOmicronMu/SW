@@ -16,7 +16,10 @@ public class SpatialGUI {
 		SpatialModel model = new SpatialModel(network);
 		SpatialView view = new SpatialView(model);
 		
+		ThresholdPanel panel = new ThresholdPanel(model, 0, 1000, 250);
+		
 		frame.add(view);
+		frame.add(panel);
 		frame.setVisible(true);
 	}
 }

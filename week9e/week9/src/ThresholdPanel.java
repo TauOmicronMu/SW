@@ -17,15 +17,20 @@ public class ThresholdPanel extends JPanel implements Observer {
 	private JSlider slider;
 	private SpatialModel model;
 	
-	public ThresholdPanel(int min, int max, int init) {
+	public ThresholdPanel(SpatialModel model, int min, int max, int init) {
+		this.model = model;
 		label = new JLabel();
 		label.setText("Threshold");
 		slider = new JSlider(min, max, init);
 		slider.addChangeListener(event -> model.setThreshold(slider.getValue()));
 	}
 	
-	public void update(Observable o, Object arg) {
-		// TODO Auto-generated method stub
+	/**
+	 * 
+	 * @param obs
+	 * @param obj
+	 */
+	public void update(Observable obs, Object obj) {
 		model.setThreshold(model.getThreshold());
 	}
 }

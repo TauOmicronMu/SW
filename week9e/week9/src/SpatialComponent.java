@@ -1,3 +1,6 @@
+import javax.swing.JPanel;
+import java.awt.BorderLayout;
+
 /**
  * 
  * @author txg523
@@ -11,9 +14,10 @@ public class SpatialComponent extends JPanel {
 	 * @param panel The ThresholdPanel
 	 */
 	public SpatialComponent(ThresholdPanel panel) {
+		super();
 		this.panel = panel;
+		setLayout(new BorderLayout());
+		add(this.panel, BorderLayout.SOUTH);
 	}
-	setLayout(new BorderLayout());
-	add(this.panel, BorderLayout.SOUTH);
 	
 }
