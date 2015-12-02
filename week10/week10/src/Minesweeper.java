@@ -127,8 +127,23 @@ public class Minesweeper {
 	 */
 	public int getAdjacentMines(int x, int y) {
 		int mineCount = 0;
-		for(int i = -1; i < 3; i++) {
-			for(int j = -1; j < 3; j++) {
+		/*
+		 * Loop from -1 to 1 because:
+		 * 
+		 * ------|-------|-------|
+		 * x - 1 |   x   | x + 1 |
+		 * y - 1 | y - 1 | y - 1 |
+ 		 * ------| ------|-------|
+		 * x - 1 |   x   | x + 1 |
+		 *   y   |   y   |   y   |
+		 * ------|-------|-------|
+		 * x - 1 |   x   | x + 1 |
+		 * y + 1 | y + 1 | y + 1 |
+		 * ------|-------|-------|
+		 * 
+		 */
+		for(int i = -1; i < 2; i++) {
+			for(int j = -1; j < 2; j++) {
 				try {
 					if(this.board[x + i][y + j].isMine()) {
 						mineCount++;
