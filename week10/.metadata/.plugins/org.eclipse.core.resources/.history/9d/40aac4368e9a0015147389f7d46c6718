@@ -122,7 +122,7 @@ public class Minesweeper {
                 	if(i == x && j == y) continue;
                 	if(i < 0 || j < 0) continue;
                 	if(i >= this.size || j >= this.size) continue;
-                	if(!this.board[i][j].isRevealed()) {
+                	if(!this.board[i][j]isRevealed()) {
                 		reveal(i, j);
                 	}
                 }

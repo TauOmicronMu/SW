@@ -1,0 +1,39 @@
+import java.awt.GridLayout;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+@SuppressWarnings("serial")
+public class BoardView extends JPanel implements Observer {
+	private MinesweeperModel model;
+	private JButton[][] cells;
+	
+	public BoardView(MinesweeperModel model) {
+		super();
+		
+		this.model = model;
+		
+		this.cells = new JButton[this.model.getSize()][this.model.getSize()];
+		
+		setLayout(new GridLayout(this.model.getSize(), this.model.getSize()));
+		
+		for(int i = 0; i < this.cells.length; i++) {
+			for(int j = 0; j < this.cells[i].length; j++){
+				this.cells[i][j] = new JButton(" ");
+				
+				final int x = i;
+				final int y = j;
+				
+				this.cells[i][j].addActionListener(e -> model.reveal(x, y));
+				
+				add(this.cells[i][j]);
+			}
+		}
+	}
+	
+	public void update(Observable obs, Object obj) {
+	}
+}
+

@@ -22,8 +22,6 @@ public class MinesweeperModel extends Observable {
 	 */
 	public void reset() {
 		this.minesweeper.reset();
-		setChanged();
-		notifyObservers();
 	}
 	
 	/**
@@ -68,18 +66,14 @@ public class MinesweeperModel extends Observable {
 	 */
 	public void revealMines() {
 		this.minesweeper.revealMines();
-		setChanged();
-		notifyObservers();
 	}
 	
 	/**
 	 * Wrapper for the method by the same name in the Minesweeper class.
 	 * Reveals the entire board.
 	 */
-	public void reveal(int x, int y) {
-		this.minesweeper.reveal(x, y);
-		setChanged();
-		notifyObservers();
+	public void reveal() {
+		this.minesweeper.reveal();
 	}
 	
 	/**
