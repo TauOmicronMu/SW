@@ -44,6 +44,10 @@ public class MinesweeperModel extends Observable {
 		return this.minesweeper.isRevealed(x, y);
 	}
 	
+	public void setRevealed(int x, int y) {
+		this.minesweeper.setRevealed(x, y);
+	}
+	
 	/**
 	 * Wrapper for the method by the same name in the Minesweeper class.
 	 * @param x The x coordinate
@@ -91,4 +95,13 @@ public class MinesweeperModel extends Observable {
 	public int getAdjacentMines(int x, int y) {
 		return this.minesweeper.getAdjacentMines(x, y);
 	}	
+	
+	/**
+	 * Wrapper for the method by the same name in the Minesweeper class.
+	 * @param n The new number of mines.
+	 */
+	public void setMines(int n) {
+		this.minesweeper.setMines(n);
+		this.reset();
+	}
 }

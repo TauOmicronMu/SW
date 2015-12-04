@@ -42,8 +42,8 @@ public class Minesweeper {
 		// Add the mines.
 		int minesPlaced = 0;
 		while(minesPlaced != this.minesAmount) {
-			int x = random.nextInt(100);
-			int y = random.nextInt(100);
+			int x = random.nextInt(10);
+			int y = random.nextInt(10);
 			// If this cell isn't a mine, place one.
 			if(!this.board[x][y].isMine()) {
 				this.board[x][y].setMine(true);
@@ -68,6 +68,10 @@ public class Minesweeper {
 	 */
 	public boolean isRevealed(int x, int y) {
 		return this.board[x][y].isRevealed();
+	}
+	
+	public void setRevealed(int x, int y) {
+		this.board[x][y].setRevealed(true);
 	}
 	
 	/**
@@ -168,6 +172,14 @@ public class Minesweeper {
 			}
 		}
 		return mineCount;
+	}
+	
+	/**
+	 * Sets the number of mines to n.
+	 * @param n The new number of mines.
+	 */
+	public void setMines(int n) {
+		this.minesAmount = n;
 	}
 	
 	/**
