@@ -47,6 +47,7 @@ public class BoardView extends JPanel implements Observer {
 				this.cells[i][j].setEnabled(true);
 				this.cells[i][j].setText(" ");
 			    this.cells[i][j].setBackground(Color.BLACK);
+			    this.cells[i][j].setForeground(Color.YELLOW);
 			}
 		}
 	}
@@ -72,6 +73,7 @@ public class BoardView extends JPanel implements Observer {
 					if(this.model.isMine(i, j)) {
 						this.cells[i][j].setText("M");
 						this.cells[i][j].setBackground(Color.RED);
+					    this.cells[i][j].setForeground(Color.YELLOW);
 					}
 					else {
 						this.cells[i][j].setText("" + this.model.getAdjacentMines(i, j));

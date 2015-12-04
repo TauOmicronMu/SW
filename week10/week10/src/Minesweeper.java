@@ -41,9 +41,12 @@ public class Minesweeper {
 		}
 		// Add the mines.
 		int minesPlaced = 0;
-		while(minesPlaced != this.minesAmount) {
-			int x = random.nextInt(10);
-			int y = random.nextInt(10);
+		/*
+		 * minesAmount/10 scales the number of mines based on the size :)
+		 */
+		while(minesPlaced != this.minesAmount * (minesAmount /10)) {
+			int x = random.nextInt(this.size);
+			int y = random.nextInt(this.size);
 			// If this cell isn't a mine, place one.
 			if(!this.board[x][y].isMine()) {
 				this.board[x][y].setMine(true);
@@ -58,6 +61,10 @@ public class Minesweeper {
 	 */
 	public int getSize() {
 		return this.size;
+	}
+	
+	public void setSize(int n) {
+		this.size = n;
 	}
 	
 	/**

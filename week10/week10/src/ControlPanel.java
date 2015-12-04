@@ -21,6 +21,8 @@ public class ControlPanel extends JMenuBar {
         this.view = view;
         
         ButtonGroup buttonGroup = new ButtonGroup();
+        //ButtonGroup numButtonGroup = new ButtonGroup();
+        
         JMenu difficulty = new JMenu("Difficulty");
         JMenuItem easy = new JRadioButtonMenuItem("Easy");
         JMenuItem exit = new JMenuItem("Exit");
@@ -31,6 +33,11 @@ public class ControlPanel extends JMenuBar {
         JMenuItem medium = new JRadioButtonMenuItem("Medium");
         JMenuItem restart = new JMenuItem("Restart");
         JMenuItem reveal = new JMenuItem("Reveal Mines");
+        
+        //JMenu size = new JMenu("Size");
+        
+        //JMenuItem ten = new JRadioButtonMenuItem("10");
+        //JMenuItem twenty = new JRadioButtonMenuItem("20");
        
         reveal.addActionListener( event -> this.model.revealMines());
         restart.addActionListener( event -> this.resetBoard());
@@ -42,13 +49,30 @@ public class ControlPanel extends JMenuBar {
                 setNumMines(numMines);
             }
        };
+       
+       /*
+       ActionListener numberListener = new ActionListener() {
+    	   public void actionPerformed(ActionEvent e) {
+    		   int num = Integer.parseInt(e.getActionCommand());
+    		   model.setSize(num);
+    	   }
+       };
+       */
         
         game.add(reveal);
         game.add(restart);
         game.add(exit);
         
         add(game);
-
+        
+        /*
+        ten.setSelected(true);
+        ten.setActionCommand("10");
+        ten.addActionListener(numberListener);
+        twenty.setActionCommand("20");
+        twenty.addActionListener(numberListener);
+        */
+        
         medium.setSelected(true);
         easy.setActionCommand("10");
         easy.addActionListener(difficultyListener);
@@ -61,11 +85,23 @@ public class ControlPanel extends JMenuBar {
         buttonGroup.add(medium);
         buttonGroup.add(hard);
         
+        /*
+        numButtonGroup.add(ten);
+        numButtonGroup.add(twenty);
+        */
+        
         difficulty.add(easy);
         difficulty.add(medium);
         difficulty.add(hard);
         
         add(difficulty);
+        
+        /*
+        size.add(ten);
+        size.add(twenty);
+        
+        add(size);
+        */
 
     }
     /**

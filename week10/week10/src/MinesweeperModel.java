@@ -34,6 +34,12 @@ public class MinesweeperModel extends Observable {
 		return this.minesweeper.getSize();
 	}
 	
+	public void setSize(int n) {
+		this.minesweeper.setSize(n);
+		setChanged();
+		notifyObservers();
+	}
+	
 	/**
 	 * Wrapper for the method by the same name in the Minesweeper class.
 	 * @param x The x coordinate
