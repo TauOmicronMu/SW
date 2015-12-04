@@ -1,3 +1,4 @@
+import java.awt.Color;
 import java.awt.GridLayout;
 import java.util.Observable;
 import java.util.Observer;
@@ -22,6 +23,12 @@ public class BoardView extends JPanel implements Observer {
 		for(int i = 0; i < this.cells.length; i++) {
 			for(int j = 0; j < this.cells[i].length; j++){
 				this.cells[i][j] = new JButton(" ");
+				this.cells[i][j].setFocusPainted(false);
+				
+			    this.cells[i][j].setBackground(Color.BLACK);
+			    this.cells[i][j].setForeground(Color.YELLOW);
+			    this.cells[i][j].setContentAreaFilled(false);
+			    this.cells[i][j].setOpaque(true);
 				
 				final int x = i;
 				final int y = j;
@@ -39,6 +46,7 @@ public class BoardView extends JPanel implements Observer {
 				this.model.setRevealed(i, j, false);
 				this.cells[i][j].setEnabled(true);
 				this.cells[i][j].setText(" ");
+			    this.cells[i][j].setBackground(Color.BLACK);
 			}
 		}
 	}
@@ -63,6 +71,7 @@ public class BoardView extends JPanel implements Observer {
 				for(int j = 0; j < model.getSize(); j++) {
 					if(this.model.isMine(i, j)) {
 						this.cells[i][j].setText("M");
+						this.cells[i][j].setBackground(Color.RED);
 					}
 					else {
 						this.cells[i][j].setText("" + this.model.getAdjacentMines(i, j));
