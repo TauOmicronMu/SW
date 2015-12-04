@@ -18,6 +18,7 @@ public class ControlPanel extends JMenuBar {
      */
     public ControlPanel(MinesweeperModel model, BoardView view) {
         this.model = model;
+        this.view = view;
         
         ButtonGroup buttonGroup = new ButtonGroup();
         JMenu difficulty = new JMenu("Difficulty");

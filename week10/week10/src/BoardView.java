@@ -34,10 +34,9 @@ public class BoardView extends JPanel implements Observer {
 	}
 	
 	public void resetBoard() {
-		System.out.println(model.getSize());
 		for(int i = 0; i < model.getSize(); i++) {
 			for(int j = 0; j < model.getSize(); j++) {
-				this.model.setRevealed(i, j);
+				this.model.setRevealed(i, j, false);
 				this.cells[i][j].setEnabled(true);
 				this.cells[i][j].setText(" ");
 			}

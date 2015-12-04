@@ -44,8 +44,8 @@ public class MinesweeperModel extends Observable {
 		return this.minesweeper.isRevealed(x, y);
 	}
 	
-	public void setRevealed(int x, int y) {
-		this.minesweeper.setRevealed(x, y);
+	public void setRevealed(int x, int y, boolean b) {
+		this.minesweeper.setRevealed(x, y, b);
 	}
 	
 	/**

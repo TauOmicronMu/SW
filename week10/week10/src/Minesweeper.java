@@ -70,8 +70,8 @@ public class Minesweeper {
 		return this.board[x][y].isRevealed();
 	}
 	
-	public void setRevealed(int x, int y) {
-		this.board[x][y].setRevealed(true);
+	public void setRevealed(int x, int y, boolean b) {
+		this.board[x][y].setRevealed(b);
 	}
 	
 	/**
