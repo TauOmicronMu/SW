@@ -1,0 +1,20 @@
+/**
+ * Contains a button to reset the network, and a button to close the program.
+ * @author txg523
+ */
+public class ButtonPanel extends JPanel implements Observer {
+	/**
+	 * Create a new ButtonPanel
+	 * @param model The SpatialModel
+	 */	
+	public ButtonPanel(SpatialModel model) {
+		super()
+		JButton reset = new JButton("Reset");
+		JButton back = new JButton("Exit");
+		
+		reset.setActionListener(event -> model.setNumberOfPoints(int number))
+		
+		add(reset);
+		add(back);
+	}
+}

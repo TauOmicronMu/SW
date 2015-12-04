@@ -1,0 +1,53 @@
+import java.awt.BorderLayout;
+import java.util.Observable;
+import java.util.Observer;
+
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JSlider;
+
+/**
+ * A panel containing a slider and a label describing what it does.
+ * The slider changes the value of the Threshold, and the picture
+ * will redraw accordingly.
+ * @author txg523
+ */
+@SuppressWarnings("serial")
+public class NumberPanel extends JPanel implements Observer {
+	private JLabel label;
+	private JSlider slider;
+	private SpatialModel model;
+	
+	/**
+	 * Create a new NumberPanel.
+	 * @param model The SpatialModel
+	 * @param min The minimum value for the slider
+	 * @param max The maximum value for the slider
+	 * @param init The initial value for the slider
+	 */
+	public NumberPanel(SpatialModel model, int min, int max, int init) {
+		super(new BorderLayout());
+		this.model = model;
+		label = new JLabel();
+		label.setText("Number of nodes");
+		slider = new JSlider(min, max, init);
+		slider.addChangeListener(event -> model.setNumberOfPoints(slider.getValue()));
+		
+		slider.setPaintTicks(true);
+		slider.setMajorTickSpacing((max-min)/4);
+		slider.setPaintLabels(true);
+		slider.setLabelTable(slider.createStandardLabels((max-min)/4));
+		
+		add(label, BorderLayout.WEST);
+		add(slider, BorderLayout.CENTER);
+	}
+	
+	/**
+	 * Update the slider value.
+	 * @param obs The observable
+	 * @param obj The object
+	 */
+	public void update(Observable obs, Object obj) {
+		slider.setValue(model.getNumberOfPoints());
+	}
+}

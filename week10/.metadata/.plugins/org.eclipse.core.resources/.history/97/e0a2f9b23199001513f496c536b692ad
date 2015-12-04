@@ -1,0 +1,54 @@
+
+/**
+ * Underlying logic for the Minesweeper game.
+ * @author txg523
+ *
+ */
+public class Minesweeper {
+	private int size;
+	private int minesAmount;
+	private Cell[][] board;
+	
+	public Minesweeper(int size, int minesAmount) {
+		//Don't try and create a board with more mines than available cells.
+		if minesAmount > size * size {
+			throw new IllegalArgumentException(""
+					+ " You can't have more mines than "
+					+ " there are cells in the board. ")
+		}
+		this.size = size;
+		this.minesAmount = minesAmount;
+	    reset();
+	}
+	
+	/**
+	 * A single cell on the board.
+	 * @author txg523
+	 *
+	 */
+	private static class Cell {
+		private boolean mine;
+		private boolean revealed;
+		
+		private Cell() {
+			this.mine = false;
+			this.revealed = false;
+		}
+		
+		public boolean isMine() {
+			return this.mine;
+		}
+		
+		public boolean isRevealed() {
+			return this.revealed;
+		}
+		
+		public void setMine(boolean b) {
+			this.mine = b;
+		}
+		
+		public void setRevealed(boolean b) {
+			this.revealed = b;
+		}
+	}
+}

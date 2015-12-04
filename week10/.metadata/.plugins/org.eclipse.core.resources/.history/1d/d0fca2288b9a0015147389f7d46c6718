@@ -1,0 +1,57 @@
+import java.util.Observable;
+
+/**
+ * Observable model of the Minesweeper class.
+ * @author txg523
+ */
+public class MinesweeperModel extends Observable {
+	private Minesweeper minesweeper;
+	
+	/**
+	 * Create a new MinesweeperModel
+	 * @param minesweeper the minesweeper program.
+	 */
+	public MinesweeperModel(Minesweeper minesweeper) {
+		super();
+		this.minesweeper = minesweeper;
+	}
+	
+	/**
+	 * Wrapper for the method by the same name in the Minesweeper class.
+	 */
+	public void reset() {
+		this.minesweeper.reset();
+	}
+	
+	/**
+	 * Wrapper for the method by the same name in the Minesweeper class.
+	 * @return The size of the board.
+	 */
+	public int getSize() {
+		return this.minesweeper.getSize();
+	}
+	
+	public boolean isRevealed(int x, int y) {
+		return this.minesweeper.isRevealed(x, y);
+	}
+	
+	public boolean isMine(int x, int y) {
+		return this.minesweeper.isMine(x, y);
+	}
+	
+	public boolean hasRevealedMine() {
+		return this.minesweeper.hasRevealedMine();
+	}
+	
+	public void revealMines() {
+		this.minesweeper.revealMines();
+	}
+	
+	public void reveal() {
+		this.minesweeper.reveal();
+	}
+	
+	public int getAdjacentMines(int x, int y) {
+		return this.minesweeper.getAdjacentMines(x, y);
+	}	
+}
