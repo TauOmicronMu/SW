@@ -34,6 +34,7 @@ public class BoardView extends JPanel implements Observer {
 				final int y = j;
 				
 				this.cells[i][j].addActionListener(e -> model.reveal(x, y));
+				this.cells[i][j].setFocusable(false);
 				
 				add(this.cells[i][j]);
 			}
